@@ -1,0 +1,7 @@
+{
+	"id": "anvilkit-plugin-export-canvas",
+	"name": "Canvas Export",
+	"version": "0.1.0",
+	"coreVersion": "^0.1.0",
+	"description": "Export AnvilKit canvas designs as PNG, JSON, SVG, or PDF."
+}

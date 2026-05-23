@@ -1,0 +1,82 @@
+{
+	"name": "@anvilkit/plugin-export-canvas",
+	"version": "0.1.0",
+	"description": "Canvas export formats (PNG / JSON / SVG / PDF) for AnvilKit Studio — headless wrappers around @anvilkit/canvas-core serializers, registered via StudioPluginRegistration.exportFormats.",
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			}
+		},
+		"./*": {
+			"import": {
+				"types": "./dist/*.d.ts",
+				"default": "./dist/*.js"
+			},
+			"require": {
+				"types": "./dist/*.d.cts",
+				"default": "./dist/*.cjs"
+			}
+		}
+	},
+	"files": [
+		"dist",
+		"meta"
+	],
+	"license": "MIT",
+	"sideEffects": false,
+	"publishConfig": {
+		"access": "public"
+	},
+	"peerDependencies": {
+		"@puckeditor/core": "^0.21.2",
+		"react": "^18.2.0 || ^19.0.0",
+		"react-dom": "^18.2.0 || ^19.0.0"
+	},
+	"peerDependenciesMeta": {
+		"react": {
+			"optional": true
+		},
+		"react-dom": {
+			"optional": true
+		}
+	},
+	"dependencies": {
+		"@anvilkit/canvas-core": "workspace:*",
+		"@anvilkit/core": "workspace:*"
+	},
+	"scripts": {
+		"build": "rslib build",
+		"dev": "rslib build --watch",
+		"lint": "pnpm exec biome lint package.json tsconfig.json rslib.config.ts vitest.config.ts src meta",
+		"format": "pnpm exec biome check --write package.json tsconfig.json rslib.config.ts vitest.config.ts src meta",
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"publint": "publint",
+		"size": "size-limit"
+	},
+	"devDependencies": {
+		"@anvilkit/biome-config": "workspace:*",
+		"@anvilkit/typescript-config": "workspace:*",
+		"@anvilkit/vitest-config": "workspace:*",
+		"@puckeditor/core": "^0.21.2",
+		"@rslib/core": "^0.21.5",
+		"@types/node": "^25.9.1",
+		"@types/react": "19.2.14",
+		"publint": "^0.3.21",
+		"react": "^19.2.6",
+		"react-dom": "^19.2.6",
+		"typescript": "6.0.3",
+		"vitest": "^4.1.7"
+	}
+}

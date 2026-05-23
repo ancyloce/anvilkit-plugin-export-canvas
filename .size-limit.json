@@ -1,0 +1,15 @@
+[
+	{
+		"name": "@anvilkit/plugin-export-canvas",
+		"path": "dist/index.js",
+		"limit": "3 KB",
+		"gzip": true,
+		"ignore": [
+			"react",
+			"react-dom",
+			"@puckeditor/core",
+			"@anvilkit/canvas-core",
+			"@anvilkit/core"
+		]
+	}
+]
