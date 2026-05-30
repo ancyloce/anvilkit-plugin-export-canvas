@@ -19,7 +19,7 @@ pnpm add @anvilkit/plugin-export-canvas @puckeditor/core
 ```
 
 Peer dependencies: `@puckeditor/core ^0.21.2` (required); `react` and `react-dom`
-(`^18.2.0 || ^19.0.0`) are **optional** peers — the plugin is headless and only
+(`>=19.0.0`) are **optional** peers — the plugin is headless and only
 needs them if your host shares a React tree. `@anvilkit/canvas-core` ships as a
 direct dependency and provides the underlying serializers.
 
