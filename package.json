@@ -1,6 +1,6 @@
 {
 	"name": "@anvilkit/plugin-export-canvas",
-	"version": "0.1.0",
+	"version": "0.1.0-rc.0",
 	"description": "Canvas export formats (PNG / JSON / SVG / PDF) for AnvilKit Studio — headless wrappers around @anvilkit/canvas-core serializers, registered via StudioPluginRegistration.exportFormats.",
 	"type": "module",
 	"main": "./dist/index.cjs",
