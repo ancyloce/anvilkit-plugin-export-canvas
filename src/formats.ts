@@ -33,6 +33,7 @@ function resolvePageId(
 
 export const jsonFormat: ExportFormatDefinition<CanvasExportOptions> = {
 	id: "canvas-json",
+	labelKey: "exportCanvas.format.json",
 	label: "Canvas JSON",
 	extension: "json",
 	mimeType: "application/json",
@@ -47,6 +48,7 @@ export const jsonFormat: ExportFormatDefinition<CanvasExportOptions> = {
 
 export const svgFormat: ExportFormatDefinition<CanvasExportOptions> = {
 	id: "canvas-svg",
+	labelKey: "exportCanvas.format.svg",
 	label: "Canvas SVG",
 	extension: "svg",
 	mimeType: "image/svg+xml",
@@ -67,6 +69,7 @@ export const svgFormat: ExportFormatDefinition<CanvasExportOptions> = {
 
 export const pdfFormat: ExportFormatDefinition<CanvasExportOptions> = {
 	id: "canvas-pdf",
+	labelKey: "exportCanvas.format.pdf",
 	label: "Canvas PDF",
 	extension: "pdf",
 	mimeType: "application/pdf",
@@ -91,6 +94,7 @@ export const pdfFormat: ExportFormatDefinition<CanvasExportOptions> = {
 
 export const pngFormat: ExportFormatDefinition<CanvasExportOptions> = {
 	id: "canvas-png",
+	labelKey: "exportCanvas.format.png",
 	label: "Canvas PNG",
 	extension: "png",
 	mimeType: "image/png",

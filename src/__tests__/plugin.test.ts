@@ -20,6 +20,14 @@ const STUB_PAGE_IR = {
 	metadata: {},
 } as unknown as PageIR;
 
+// Minimal ctx — register() only needs `registerMessages` (compile-time
+// catalog contribution); the rest of StudioPluginContext is unused here.
+const fakeCtx = {
+	registerMessages: () => undefined,
+} as unknown as Parameters<
+	ReturnType<typeof createCanvasExportPlugin>["register"]
+>[0];
+
 function ir(): CanvasIR {
 	return createCanvasIR({
 		id: "d1",
@@ -31,7 +39,7 @@ function ir(): CanvasIR {
 
 describe("createCanvasExportPlugin", () => {
 	it("registers the four canvas export formats with stable ids", async () => {
-		const registration = await createCanvasExportPlugin().register();
+		const registration = await createCanvasExportPlugin().register(fakeCtx);
 		const formats = registration.exportFormats ?? [];
 		expect(formats.map((f) => f.id)).toEqual([
 			"canvas-png",

@@ -2,6 +2,7 @@ import type { StudioPlugin, StudioPluginMeta } from "@anvilkit/core/types";
 import config from "../meta/config.json";
 import packageJson from "../package.json";
 import { canvasExportFormats } from "./formats.js";
+import { EXPORT_CANVAS_ENTRY } from "./i18n/entry.js";
 import type { CanvasExportPluginOptions } from "./types.js";
 
 // `version` is derived from package.json so a version bump can never drift the
@@ -26,7 +27,10 @@ export function createCanvasExportPlugin(
 ): StudioPlugin {
 	return {
 		meta: canvasExportPluginMeta,
-		register() {
+		register(ctx) {
+			// Contribute the `exportCanvas` catalog so the format-menu labels
+			// resolve via `ExportFormatDefinition.labelKey` in-chrome.
+			ctx.registerMessages(EXPORT_CANVAS_ENTRY);
 			return {
 				meta: canvasExportPluginMeta,
 				exportFormats: canvasExportFormats,

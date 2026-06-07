@@ -1,0 +1,6 @@
+{
+	"exportCanvas.format.json": "Canvas JSON",
+	"exportCanvas.format.svg": "Canvas SVG",
+	"exportCanvas.format.pdf": "Canvas PDF",
+	"exportCanvas.format.png": "Canvas PNG"
+}

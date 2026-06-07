@@ -1,0 +1,6 @@
+{
+	"exportCanvas.format.json": "画布 JSON",
+	"exportCanvas.format.svg": "画布 SVG",
+	"exportCanvas.format.pdf": "画布 PDF",
+	"exportCanvas.format.png": "画布 PNG"
+}
