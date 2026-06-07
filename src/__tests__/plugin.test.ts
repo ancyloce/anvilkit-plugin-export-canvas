@@ -55,7 +55,10 @@ describe("createCanvasExportPlugin", () => {
 	it("derives meta.version from package.json", async () => {
 		const plugin = createCanvasExportPlugin();
 		expect(plugin.meta.id).toBe("anvilkit-plugin-export-canvas");
-		expect(plugin.meta.version).toMatch(/^\d+\.\d+\.\d+$/);
+		// Allow SemVer prerelease/build suffixes (e.g. `0.1.0-rc.0`).
+		expect(plugin.meta.version).toMatch(
+			/^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?(?:\+[0-9A-Za-z.-]+)?$/,
+		);
 	});
 });
 
