@@ -1,0 +1,6 @@
+{
+	"exportCanvas.format.json": "캔버스 JSON",
+	"exportCanvas.format.svg": "캔버스 SVG",
+	"exportCanvas.format.pdf": "캔버스 PDF",
+	"exportCanvas.format.png": "캔버스 PNG"
+}

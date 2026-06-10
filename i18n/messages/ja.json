@@ -1,0 +1,6 @@
+{
+	"exportCanvas.format.json": "キャンバス JSON",
+	"exportCanvas.format.svg": "キャンバス SVG",
+	"exportCanvas.format.pdf": "キャンバス PDF",
+	"exportCanvas.format.png": "キャンバス PNG"
+}
