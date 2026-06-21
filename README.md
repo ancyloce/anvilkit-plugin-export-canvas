@@ -1,6 +1,6 @@
 # @anvilkit/plugin-export-canvas
 
-> **Alpha (`0.1.0`).** API may change before `1.0`.
+> **Alpha (`0.1.0-rc.2`).** API may change before `1.0`.
 
 Headless canvas export plugin for AnvilKit Studio. Registers four export formats
 — **PNG, JSON, SVG, and PDF** — for AnvilKit canvas designs by wrapping the
