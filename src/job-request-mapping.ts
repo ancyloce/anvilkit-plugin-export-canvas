@@ -1,0 +1,22 @@
+import type { CanvasExportJobSource } from "@anvilkit/canvas-core";
+import type { CanvasExportOptions } from "./types.js";
+
+/**
+ * Documents and tests the FR-040 mapping (canvas-m3-001, PRD §12.7):
+ * this plugin's `CanvasExportOptions.canvasIR` maps 1:1 onto the headless
+ * job contract's `CanvasExportJobSource.document`. Returns `undefined` when
+ * `canvasIR` is absent — `run()` throws on that case today regardless, so
+ * there is no inline document to map.
+ *
+ * The plugin does not (yet) adopt `CanvasExportJobRequest` as its own
+ * invocation shape — export still flows through the Studio
+ * `exportAs(formatId, options)` pipeline (`@anvilkit/contracts`'
+ * `ExportFormatDefinition`), which this mapping is deliberately decoupled
+ * from. This function exists purely to keep the two contracts' `document`
+ * fields provably in sync as both evolve.
+ */
+export function canvasExportOptionsToJobSource(
+	options: Pick<CanvasExportOptions, "canvasIR">,
+): CanvasExportJobSource | undefined {
+	return options.canvasIR ? { document: options.canvasIR } : undefined;
+}

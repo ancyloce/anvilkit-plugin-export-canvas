@@ -5,6 +5,7 @@ export {
 	pngFormat,
 	svgFormat,
 } from "./formats.js";
+export { canvasExportOptionsToJobSource } from "./job-request-mapping.js";
 export { createCanvasExportPlugin } from "./plugin.js";
 export {
 	canvasToJson,
